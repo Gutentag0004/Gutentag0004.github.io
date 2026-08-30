@@ -1,25 +1,23 @@
-# 指定使用 jekyll-remote-theme 插件来加载非官方主题
 plugins:
   - jekyll-remote-theme
 
-# 指定使用的主题，格式为 仓库所有者/仓库名
-theme: jekyll-theme-simplex
-
+remote_theme: andreondra/jekyll-theme-simplex
 
 title: Gutentag0004
 description: Thoughts on code, ideas, and everything in between
+copyright: © Gutentag0004 2026
 
-copyright: © Gutentag0004 2026 #Your copyright.
+sass:
+  style: compressed
 
 collections:
-    category:
-        output: true
-    authors:
-        output: false
+  category:
+    output: true
+  authors:
+    output: false
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: category
     values:
