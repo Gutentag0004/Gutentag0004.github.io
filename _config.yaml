@@ -5,6 +5,9 @@ plugins:
 # 指定使用的主题，格式为 仓库所有者/仓库名
 remote_theme: andreondra/jekyll-theme-simplex
 
+title: Gutentag0004
+description: Thoughts on code, ideas, and everything in between
+
 logo_img: /assets/img/icon/myblog-logo.svg #Absolute path to the logo. If not specified, the title will be displayed instead.
 copyright: © Gutentag0004 2026 #Your copyright.
 
