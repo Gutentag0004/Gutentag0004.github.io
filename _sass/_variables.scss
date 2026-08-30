@@ -6,21 +6,21 @@
 // THEME COLORS
 :root{
 
-    --c-themePrimaryLight: #eeeeee;
-    --c-themePrimaryDark:  #101010;
-    --c-themeSecondaryLight: #DADADA;
-    --c-themeSecondaryDark: #252525;
-    --c-themeTerniaryLight: #AEAEAE;
-    --c-themeTerniaryDark: #515151;
-    --c-themeQuaternaryLight: #919191;
-    --c-themeQuaternaryDark: #888888;
+    --c-themePrimaryLight: #F5F7FA;
+    --c-themePrimaryDark:  #000000;
+    --c-themeSecondaryLight: #E2EAF2;
+    --c-themeSecondaryDark: #1C2B3A;
+    --c-themeTerniaryLight: #9BAEC1;
+    --c-themeTerniaryDark: #3D5A72;
+    --c-themeQuaternaryLight: #7B95AA;
+    --c-themeQuaternaryDark: #6B8599;
 
-    --c-themeHueRed: #C02717;
-    --c-themeHueGreen: #8EA604;
-    --c-themeHueBlue: #2E86AB;
-    --c-themeHueOrange: #E59500;
-    --c-themeHuePurple: #9F00CE;
-    --c-themeHueBrown: #230007;
+    --c-themeHueRed: #B22222;
+    --c-themeHueGreen: #2A7A3B;
+    --c-themeHueBlue: #1A6FA8;
+    --c-themeHueOrange: #C96A00;
+    --c-themeHuePurple: #5C3D9A;
+    --c-themeHueBrown: #2C1A2E;
 }
 
 // ELEMENT COLORS
@@ -28,7 +28,7 @@
 
     // *** Default light. ***
     --c-articleHeading: var(--c-themePrimaryDark);
-    --c-articleParagraph: var(--c-themeSecondaryDark);
+    --c-articleParagraph: var(--c-themePrimaryDark);
     --c-articleBackground: var(--c-themePrimaryLight);
 
     --c-pageBackground: var(--c-themePrimaryLight);
@@ -43,7 +43,7 @@
     --c-snippetBackgroundExternal: rgba(239, 239, 239, 0.425);
     --c-snippetBackgroundInternal: var(--c-pageBackground);
     --c-snippetHeading: var(--c-themePrimaryDark);
-    --c-snippetDate: var(--c-themeSecondaryDark);
+    --c-snippetDate: var(--c-themePrimaryDark);
     --c-snippetAuthor: var(--c-themePrimaryDark);
     --c-snippetShadowHover: rgba(0,0,0,0.5);
     --c-snippetShadow:  rgba(0, 0, 0, 0);
@@ -74,7 +74,7 @@
 
     --c-tableBorder: var(--c-themePrimaryDark);
 
-    --c-subtitle: var(--c-themeTerniaryDark);
+    --c-subtitle: var(--c-themePrimaryDark);
 
     //Syntax highlighting.
     .highlight .hll { background-color: #ffffcc }
