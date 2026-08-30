@@ -3,7 +3,8 @@
 ---
 
 // 1. 先导入主题的基础样式
-@import "{{ site.theme }}";
+@import "jekyll-theme-simplex";
+
 
 
 // 2. 在这里覆盖或添加新样式 (在导入之后，利用CSS层叠特性)
