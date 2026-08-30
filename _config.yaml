@@ -1,0 +1,6 @@
+# 指定使用 jekyll-remote-theme 插件来加载非官方主题
+plugins:
+  - jekyll-remote-theme
+
+# 指定使用的主题，格式为 仓库所有者/仓库名
+remote_theme: andreondra/jekyll-theme-simplex
