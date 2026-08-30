@@ -2,9 +2,8 @@
 layout: post
 title: "Hello, World!"
 date: 2026-08-30
-category: [programming, testing] #One, more categories or no at all.
-
+category: [programming] #One, more categories or no at all.
 ---
-Welcome to my blog. This is the first post — more to come.
+第一篇博客，以此来记录这段时间的学习收获
 
-Stay tuned for thoughts on engineering, tools, and things I find interesting.
+Thinking in code and learning and everything in between
