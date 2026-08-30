@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,14 +192,24 @@
   <main>
     <ul class="post-list">
 
+      {% for post in site.posts %}
       <li>
-        <a href="#">
-          <div class="post-meta">Aug 30, 2026</div>
-          <div class="post-title">Hello, World!</div>
-          <div class="post-excerpt">Welcome to my blog. This is the first post — more to come. Stay tuned for thoughts on engineering, tools, and things I find interesting.</div>
+        <a href="{{ post.url | relative_url }}">
+          <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+          <div class="post-title">{{ post.title }}</div>
+          {% if post.excerpt %}
+          <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+          {% endif %}
           <span class="read-more">Read more</span>
         </a>
       </li>
+      {% endfor %}
+
+      {% if site.posts.size == 0 %}
+      <li style="border-top: 1px solid var(--border); padding: 1.75rem 0; color: var(--muted); font-size: 0.9rem;">
+        No posts yet. Check back soon.
+      </li>
+      {% endif %}
 
     </ul>
   </main>
