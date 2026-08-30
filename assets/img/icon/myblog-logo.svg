@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Dark, introspective background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="60%" r="60%" fx="50%" fy="60%">
+      <stop offset="0%" stop-color="#121829" />
+      <stop offset="60%" stop-color="#0a0d14" />
+      <stop offset="100%" stop-color="#040508" />
+    </radialGradient>
+
+    <!-- Compass Ring Metallic/Ethereal Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a354d" />
+      <stop offset="50%" stop-color="#151b28" />
+      <stop offset="100%" stop-color="#0f131d" />
+    </linearGradient>
+
+    <!-- Golden Beacon / North Star Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff3d1" />
+      <stop offset="35%" stop-color="#ffd05b" />
+      <stop offset="100%" stop-color="#e69214" />
+    </linearGradient>
+
+    <!-- Ascending Light Ray Gradient -->
+    <linearGradient id="rayGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffd05b" stop-opacity="0" />
+      <stop offset="70%" stop-color="#ffd05b" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Subtle Mountain Shading -->
+    <linearGradient id="mountainLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <linearGradient id="mountainRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Glow Filter for the Star -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Space / Inner Darkness Background -->
+  <rect width="800" height="800" fill="url(#bgGrad)" />
+
+  <g transform="translate(0, 0)">
+    
+    <!-- Outer Compass Ring (The World / Map) -->
+    <circle cx="400" cy="400" r="280" fill="none" stroke="url(#ringGrad)" stroke-width="8" />
+    <circle cx="400" cy="400" r="288" fill="none" stroke="#2e3d5c" stroke-width="1" stroke-dasharray="2 6" opacity="0.6" />
+    <circle cx="400" cy="400" r="268" fill="none" stroke="#2e3d5c" stroke-width="1" stroke-dasharray="6 6" opacity="0.4" />
+
+    <!-- Compass Ticks (Degrees of Direction) -->
+    <!-- Major Cardinal Marks -->
+    <path d="M 400,128 V 140 M 400,660 V 672 M 128,400 H 140 M 660,400 H 672" stroke="#475569" stroke-width="3" stroke-linecap="round" />
+    <!-- Ordinal Marks -->
+    <path d="M 208,208 L 217,217 M 592,592 L 583,583 M 208,592 L 217,583 M 592,208 L 583,217" stroke="#334155" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Ascending Light Beam -->
+    <polygon points="360,540 440,540 415,160 385,160" fill="url(#rayGrad)" />
+
+    <!-- The Mountain Peaks (The Climb / Hardship) -->
+    <!-- Background Secondary Peak -->
+    <polygon points="260,540 340,410 420,540" fill="#0d1322" />
+    <polygon points="340,410 420,540 340,540" fill="#080d1a" opacity="0.5" />
+
+    <!-- Foreground Main Peak (Steep Ascent) -->
+    <polygon points="200,540 400,240 400,540" fill="url(#mountainLeft)" />
+    <polygon points="400,240 600,540 400,540" fill="url(#mountainRight)" />
+
+    <!-- Mountain Ridge Line -->
+    <path d="M 400,240 L 400,540" stroke="#384f73" stroke-width="2" opacity="0.6" />
+    
+    <!-- Stylized Geometric Crest / Path on Peak -->
+    <path d="M 310,540 L 400,340 L 430,410 L 400,240" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+
+    <!-- The Waypoint / Horizon Base Line -->
+    <line x1="160" y1="540" x2="640" y2="540" stroke="#2a354d" stroke-width="2" />
+
+    <!-- The Guiding Light / Polaris Star (Purpose & Greatness) -->
+    <g transform="translate(400, 160)" filter="url(#glow)">
+      <!-- Outer Glow Ring -->
+      <circle cx="0" cy="0" r="32" fill="#ffd05b" opacity="0.15" />
+      
+      <!-- Diamond Core -->
+      <path d="M 0,-45 Q 0,0 45,0 Q 0,0 0,45 Q 0,0 -45,0 Q 0,0 0,-45 Z" fill="url(#goldGrad)" />
+      
+      <!-- Diagonals -->
+      <path d="M 0,-20 Q 0,0 20,0 Q 0,0 0,20 Q 0,0 -20,0 Q 0,0 0,-20 Z" fill="#ffffff" />
+      
+      <!-- Center Pure Point -->
+      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    </g>
+
+    <!-- Subtle Compass Needle Motif overlaying the Star -->
+    <path d="M 400,115 L 408,152 L 400,145 L 392,152 Z" fill="#ffffff" opacity="0.9" />
+
+    <!-- Typography / Personal Crest -->
+    <text x="400" y="620" text-anchor="middle" fill="#f8fafc" font-family="'Cinzel', 'Trajan Pro', 'Georgia', serif" font-size="22" font-weight="600" letter-spacing="8">
+      AD ASTRA
+    </text>
+    <text x="400" y="648" text-anchor="middle" fill="#64748b" font-family="'Inter', 'Helvetica Neue', sans-serif" font-size="11" font-weight="500" letter-spacing="5">
+      FROM THE VALLEY • TO THE HEIGHTS
+    </text>
+
+    <!-- Framing Accent Dots -->
+    <circle cx="400" cy="680" r="2" fill="#ffd05b" />
+  </g>
+</svg>
