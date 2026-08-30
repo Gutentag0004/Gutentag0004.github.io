@@ -3,69 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gutentag0004 Blog</title>
+  <title>Gutentag0004</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body {
-      font-family: Georgia, serif;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.7;
+    :root {
+      --accent: #6366f1;
+      --accent-light: #eef2ff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f9fafb;
+      --card: #ffffff;
     }
 
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
     header {
-      background: #fff;
-      border-bottom: 1px solid #e0e0e0;
-      padding: 1.5rem 2rem;
+      background: var(--card);
+      border-top: 3px solid var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 1.6rem;
+      font-size: 2rem;
+      font-weight: 700;
       letter-spacing: -0.5px;
+      color: var(--text);
     }
 
     header p {
-      color: #666;
+      color: var(--muted);
       font-size: 0.9rem;
-      margin-top: 0.2rem;
+      margin-top: 0.35rem;
     }
 
+    header nav {
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    header nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    header nav a:hover { color: var(--accent); }
+
+    /* ── Layout ── */
     main {
       max-width: 680px;
-      margin: 2.5rem auto;
+      margin: 3rem auto;
       padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
     }
 
+    /* ── Section label ── */
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── Post card ── */
     article {
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
-      padding: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem 2rem;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    article:hover {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      border-color: #d1d5db;
+      transform: translateY(-2px);
+    }
+
+    article a { text-decoration: none; color: inherit; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .post-meta time {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .post-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
     }
 
     article h2 {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.2px;
       margin-bottom: 0.4rem;
+      color: var(--text);
+      transition: color 0.15s;
     }
 
-    article time {
-      font-size: 0.82rem;
-      color: #888;
-      display: block;
-      margin-bottom: 1rem;
-    }
+    article:hover h2 { color: var(--accent); }
 
     article p {
-      font-size: 1rem;
-      color: #444;
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.65;
     }
 
+    /* ── Footer ── */
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1rem;
       font-size: 0.8rem;
-      color: #aaa;
+      color: #9ca3af;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+      article { padding: 1.25rem 1.25rem; }
     }
   </style>
 </head>
@@ -73,19 +172,29 @@
 
   <header>
     <h1>Gutentag0004</h1>
-    <p>A personal blog</p>
+    <p>Thoughts on code, ideas, and everything in between</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+    </nav>
   </header>
 
   <main>
+    <p class="section-label">Latest Posts</p>
+
     <article>
+      <div class="post-meta">
+        <time datetime="2026-08-30">Aug 30, 2026</time>
+        <span class="post-tag">General</span>
+      </div>
       <h2>Hello, World!</h2>
-      <time datetime="2026-08-30">August 30, 2026</time>
-      <p>Welcome to my blog. This is the first post — more to come.</p>
+      <p>Welcome to my blog. This is the first post — more to come. Stay tuned for thoughts on engineering, tools, and things I find interesting.</p>
     </article>
+
   </main>
 
   <footer>
-    &copy; 2026 Gutentag0004
+    &copy; 2026 Gutentag0004 &mdash; built with <a href="https://pages.github.com">GitHub Pages</a>
   </footer>
 
 </body>
