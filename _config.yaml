@@ -6,6 +6,7 @@ remote_theme: andreondra/jekyll-theme-simplex
 title: AD ASTRA
 tagline: Thoughts on code, ideas, and everything in between
 copyright: © Gutentag0004 2026
+favicon: /assets/favicon.ico
 
 sass:
   style: compressed
