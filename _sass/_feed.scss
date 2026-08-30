@@ -1,9 +1,8 @@
 // =============================
 // feed.scss
 // =============================
-// Used for page feed - used in index and categories.
 
-.feed{
+.feed {
 
     padding: 2rem;
     margin: 2rem;
@@ -11,86 +10,79 @@
     width: 100%;
     justify-self: center;
 
-    @include flexbox{
+    @include flexbox {
         flex-direction: column;
     };
 
-    &__description{
-        @include flexbox{
+    &__description {
+
+        @include flexbox {
             flex-direction: column;
         };
 
-        color: var(--c-feed-title);
-
+        color: #000;
         text-align: center;
         padding: 0 2rem;
         margin-bottom: 2rem;
         min-width: 80%;
 
-        h1{
+        h1 {
             margin: 1rem 0 0 0;
 
-            @include for-size('tablet'){
+            @include for-size('tablet') {
                 margin: 0;
             }
         }
     }
 
-    .snippet{
+    .snippet {
 
         @include flexbox;
         position: relative;
         width: 100%;
-        
-        &__link{
+
+        &__link {
             text-decoration: none;
             color: initial;
             width: 100%;
             height: 100%;
-            margin: 1rem 0;
-            padding: 1rem 2rem;
-            box-shadow: inset 0px 0px 14px -4px var(--c-snippetShadow);
-            transition: $t-smooth;
-
-            &:hover{
-                transform: scale(.99);
-                box-shadow: inset 0px 0px 14px -4px var(--c-snippetShadowHover);
-            }
+            margin: 0;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
-        @include for-size('tablet'){
+        @include for-size('tablet') {
             width: 100%;
             padding: 0;
         }
 
-        &__data{
+        &__data {
 
-            @include flexbox{
+            @include flexbox {
                 flex-direction: column;
                 align-items: flex-start;
             };
 
-            &__metadata{
-                font-family: var(--f-header);
-                
+            &__metadata {
+
                 @include flexbox;
 
-                &__category{
+                &__category {
                     text-transform: uppercase;
                     margin: 0;
                     @include flexbox;
 
-                    &__title{
-                        color: var(--c-noCategoryText);
-                        background: var(--c-noCategoryBackground);                        
+                    &__title {
+                        color: black;
+                        background: #000;
                         padding: .2rem .5rem;
+                        font-size: .75rem;
                     }
 
-                    
-                    @include for-size('tablet'){
+                    @include for-size('tablet') {
                         flex-direction: column;
 
-                        p{
+                        p {
                             text-align: center;
                             width: 100%;
                             margin: 0;
@@ -98,76 +90,78 @@
                     }
                 }
 
-                &__date{
+                &__date {
                     margin: 0 0 0 1rem;
-                    color: var(--c-snippetDate);
+                    color: #555;
+                    font-size: .875rem;
 
-                    @include for-size('tablet'){
-                        margin: 1rem 0 0 0;
+                    @include for-size('tablet') {
+                        margin: .5rem 0 0 0;
                     }
                 }
 
-                @include for-size('tablet'){
+                @include for-size('tablet') {
                     flex-direction: column;
                 }
             }
-            
-            &__header{
-                margin: 1rem 0 0 0;
-                color: var(--c-articleHeading);
 
-                @include for-size('tablet'){
-                    margin: 1rem 0 0 0;
+            &__header {
+                margin: .5rem 0 0 0;
+                color: #000;
+
+                @include for-size('tablet') {
+                    margin: .5rem 0 0 0;
                     text-align: center;
                 }
             }
 
-            &__text{
-
-                color: var(--c-snippetHeading);
-                margin: 1rem 0 0 0;
+            &__text {
+                color: #333;
+                margin: .5rem 0 0 0;
             }
 
-            &__author{
+            &__author {
 
-                margin: 1.5rem 0 0 0;
-                color: var(--c-snippetAuthor);
+                margin: .75rem 0 0 0;
+                color: #555;
+                font-size: .875rem;
 
-                @include flexbox{
+                @include flexbox {
                     flex-direction: row;
                 };
 
-                img{
+                img {
                     height: 2rem;
                     border-radius: 100%;
                 }
 
-                p{
+                p {
                     margin: 0 0 0 1rem;
                 }
             }
 
-            @include for-size('tablet'){
+            @include for-size('tablet') {
                 align-items: center;
             }
         }
-        
-        &::after{
+
+        &::after {
             content: "";
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
             z-index: -1;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: .2;
+            opacity: .15;
 
-            @include for-size('tablet'){
-                opacity: .3;
+            @include for-size('tablet') {
+                opacity: .25;
             }
         }
     }
 
-    @include for-size('tablet'){
+    @include for-size('tablet') {
         padding: 0;
     }
 }

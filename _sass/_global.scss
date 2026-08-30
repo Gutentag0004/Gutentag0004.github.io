@@ -1,119 +1,88 @@
 // =============================
 // global.scss
 // =============================
-// Used for global styles.
 
-*, *:before, *:after{
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
-html{
-
-    font-family: var(--f-text);
-
-    // Root font size. Other sizes are derived from this accroding to variable values.
+html {
+    font-family: $font-system;
     font-size: 16px;
 
-    @include for-size('tablet'){
+    @include for-size('tablet') {
         font-size: 18px;
     }
 }
 
-body{
-    background: var(--c-pageBackground);
-    
+body {
+    background: #fff;
     margin: 0;
     min-height: 100vh;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-h1,h2,h3,h4,h5,h5,h6{
-
-    font-family: var(--f-header);
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-system;
 }
 
-h1{
-
+h1 {
     font-size: 2rem;
 }
 
-p{
-    font-size: var(--s-p);
+p {
+    font-size: 1rem;
 }
 
-a{
-    
-    &:link{
-        color: var(--c-link);
-    }
-
-    &:visited{
-        color: var(--c-linkVisited);
-    }
-
-    &:hover{
-        color: var(--c-linkHover);
-    }
-
-    &:active{
-        color: var(--c-linkActive);
-    }
+a {
+    &:link    { color: #0645ad; }
+    &:visited { color: #551a8b; }
+    &:hover   { color: #0645ad; }
+    &:active  { color: #c00; }
 }
 
-table:not([class]){
+table:not([class]) {
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid var(--c-tableBorder);
+    border: 1px solid #ccc;
 
-    th,td{
-        padding: .25rem;
-        border: 1px solid var(--c-tableBorder);
+    th, td {
+        padding: .25rem .5rem;
+        border: 1px solid #ccc;
     }
 }
 
-.highlight{
-
+.highlight {
     margin: 2rem 0;
-    transition: $t-smooth;
-    box-shadow: inset 0px 0px 14px -4px var(--c-codeShadow);
-
-    &:hover{
-        box-shadow: inset 0px 0px 14px -4px var(--c-codeShadowHover);
-    }
-
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
     max-width: calc(100vw - 2rem);
     overflow-x: auto;
 
-    pre{
+    pre {
         margin: 0;
         padding: 1rem;
     }
 }
 
-.sx-center{
-
+.sx-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sx-button{
-
+.sx-button {
     width: 100%;
     margin: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    &__content{
-
-        &:link, &:visited, &:hover, &:active{
-            color: var(--c-themePrimaryLight);
-        }
+    &__content {
+        &:link, &:visited, &:hover, &:active { color: #fff; }
         text-decoration: none;
         width: fit-content;
         padding: .5rem 1rem;
@@ -122,32 +91,27 @@ table:not([class]){
         justify-content: center;
         transition: $t-smooth;
 
-        &.red{background-color: var(--c-themeHueRed);}
-        &.orange{background-color: var(--c-themeHueOrange);}
-        &.green{background-color: var(--c-themeHueGreen);}
-        &.blue{background-color: var(--c-themeHueBlue);}
-        &.purple{background-color: var(--c-themeHuePurple);}
-        &.brown{background-color: var(--c-themeHueBrown);}
+        &.red    { background-color: #B22222; }
+        &.orange { background-color: #C96A00; }
+        &.green  { background-color: #2A7A3B; }
+        &.blue   { background-color: #1A6FA8; }
+        &.purple { background-color: #5C3D9A; }
+        &.brown  { background-color: #2C1A2E; }
 
-        img{
+        img {
             margin-right: 1rem;
             height: 1rem;
             filter: brightness(0) invert(1);
         }
-
-        &:hover{
-            letter-spacing: .05rem;
-        }
     }
 }
 
-.sx-subtitle{
+.sx-subtitle {
     font-style: italic;
-    color: var(--c-subtitle);
+    color: #555;
 }
 
-.sx-picture{
-
+.sx-picture {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,136 +1,134 @@
 // =============================
 // post.scss
 // =============================
-// Used for single post view.
 
 $postMaxWidth: 1000px;
 
-.post{
+.post {
 
     justify-self: center;
     margin: 0 2rem;
     max-width: $postMaxWidth;
-    @include flexbox{
+
+    @include flexbox {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
     }
 
-    &__title{
+    &__title {
 
-        &__text{
+        &__text {
             text-align: center;
-            color: var(--c-postTitle);
+            color: #000;
             margin-bottom: 0;
         }
     }
 
-    &__meta{
+    &__meta {
 
         @include flexbox;
         width: 100%;
 
-        &__divider{
-            color: var(--c-postText);
+        &__divider {
+            color: #000;
             margin: 0 1rem;
 
-            @include for-size('tablet'){
+            @include for-size('tablet') {
                 display: none;
             }
         }
 
-        &__category{
+        &__category {
             text-transform: uppercase;
             margin: 0;
             @include flexbox;
 
-            &__title{
-                color: var(--c-noCategoryText);
-                background: var(--c-noCategoryBackground);
+            &__title {
+                color: black;
+                background: #000;
                 padding: .2rem .5rem;
+                font-size: .75rem;
             }
 
-            @include for-size('tablet'){
-
+            @include for-size('tablet') {
                 display: none;
                 margin-top: 1rem;
-                p{
+
+                p {
                     margin: 0;
                     width: 100%;
                     text-align: center;
                 }
+
                 flex-direction: column;
             }
         }
 
-        &__date{
+        &__date {
+            color: #555;
+            font-size: .875rem;
 
-            color: var(--c-postText);
-            @include for-size('tablet'){
+            @include for-size('tablet') {
                 margin-top: .5rem;
             }
         }
 
-        &__author{
-
-            color: var(--c-postText);
+        &__author {
+            color: #000;
             width: fit-content;
             @include flexbox;
-    
-            &__photo{
+
+            &__photo {
                 margin: 0 1rem;
                 width: 2rem;
                 border-radius: 100%;
             }
         }
 
-        @include for-size('tablet'){
+        @include for-size('tablet') {
             flex-direction: column;
         }
     }
 
-    &__content{
+    &__content {
+        color: #000;
 
-        color: var(--c-postText);
-        h1{
+        h1 {
             font-size: 1.8rem;
         }
-        img{
+
+        img {
             max-width: 100%;
         }
     }
 
-    &__navigator{
+    &__navigator {
 
         margin-top: 1rem;
         width: 100%;
 
-        &__buttons{
+        &__buttons {
 
-            @include flexbox{
+            @include flexbox {
                 justify-content: space-between;
             };
 
-            a{
+            a {
                 transition: $t-smooth;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 1.25rem;
-                color: var(--c-navigator);
-                filter: var(--c-navigatorFilter);
-
+                color: #000;
                 display: flex;
                 align-items: center;
 
-                &:hover{
-                    letter-spacing: .25rem;
-                }
-
-                .arrow-left{
+                .arrow-left {
                     margin-right: .5rem;
                     height: 1em;
                 }
-                .arrow-right{
+
+                .arrow-right {
                     margin-left: .5rem;
                     height: 1em;
                 }
@@ -139,17 +137,16 @@ $postMaxWidth: 1000px;
     }
 }
 
-// Enable text wrapping on mobile
-@media screen and (max-width: $postMaxWidth){
-    .post{
+@media screen and (max-width: $postMaxWidth) {
+    .post {
         max-width: calc(100% - 2rem);
 
-        &__content{
+        &__content {
             max-width: 100%;
         }
-        
-        &__content p{
-               overflow-wrap: break-word;
+
+        &__content p {
+            overflow-wrap: break-word;
         }
     }
 }

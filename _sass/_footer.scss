@@ -1,51 +1,49 @@
 // =============================
-// index.scss
+// footer.scss
 // =============================
-// Used for page footer.
 
-.footer{
+.footer {
 
     @include flexbox;
     padding: 1rem 0 0 0;
     margin-top: auto;
-    color: var(--c-footerText);
+    color: #000;
 
-    &__about{
+    &__about {
 
         @include flexbox;
 
-        &__copyright{
+        &__copyright {
             margin: 0;
         }
 
-        .divider{
+        .divider {
             margin: 0 1rem;
 
-            @include for-size('tablet'){
+            @include for-size('tablet') {
                 display: none;
             }
         }
 
-        &__theme{
+        &__theme {
             @include flexbox;
         }
 
-        #simplex-logo{
-            
-            img{
+        #simplex-logo {
+
+            img {
                 vertical-align: middle;
                 height: 1.25rem;
                 margin: 0 .5rem;
                 transition: $t-smooth;
-                filter: var(--c-footerImageFilter);
 
-                &:hover{
+                &:hover {
                     transform: scale(1.05) rotate(-5deg);
                 }
             }
         }
 
-        @include for-size('tablet'){
+        @include for-size('tablet') {
             flex-direction: column;
         }
     }
