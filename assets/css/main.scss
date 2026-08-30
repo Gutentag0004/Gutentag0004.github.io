@@ -1,0 +1,12 @@
+---
+# 文件开头需要有 YAML Front Matter，即使内容为空，这行也很重要
+---
+
+// 1. 先导入主题的基础样式
+@import "{{ site.theme }}";
+
+
+// 2. 在这里覆盖或添加新样式 (在导入之后，利用CSS层叠特性)
+body {
+    background-color: #eeeeee; // 设置为浅蓝色
+}
