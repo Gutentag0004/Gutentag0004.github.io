@@ -9,6 +9,7 @@ copyright: © Gutentag0004 2026
 
 sass:
   style: compressed
+  silence_deprecations: [import]
 
 collections:
   category:
