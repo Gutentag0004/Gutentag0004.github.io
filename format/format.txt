@@ -1,0 +1,33 @@
+# Spanish Learning Notes
+
+  ## Vocabulary
+  | Spanish | English | Example Sentence |
+  |---------|---------|-----------------|
+  | hablar  | to talk | Yo hablo español. |
+  | comer   | to eat  | Ella come pizza.  |
+
+  ## Grammar Rules
+  ### Present Tense (-AR verbs)
+  | Pronoun | Ending | Example |
+  |---------|--------|---------|
+  | yo      | -o     | hablo   |
+  | tú      | -as    | hablas  |
+  | él/ella | -a     | habla   |
+
+  ## Phrases
+  > "¿Cómo estás?" — How are you?
+  > "Muy bien, gracias." — Very well, thank you.
+
+  ## Notes / Common Mistakes
+  - **ser** vs **estar**: both mean "to be" but used differently
+    - *ser* → permanent (Soy americano)
+    - *estar* → temporary (Estoy cansado)
+
+  Key recommendations:
+  - Use tables for vocabulary — easy to scan
+  - Use blockquotes (>) for phrases/dialogues
+  - Use ## sections per topic (verbs, nouns, phrases)
+  - Use italics for Spanish words, bold for emphasis
+  - Add a ## Review section at the bottom with questions to test yourself
+
+  Want me to generate a starter template file for you?
