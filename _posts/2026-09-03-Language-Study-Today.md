@@ -1,11 +1,9 @@
-```
+---
 layout: post
 title: "Language Study Note - Item around House"
 date: 2026-09-03
 category: [language] #One, more categories or no at all.
-```
-
-
+---
 - **la sala**: living room
 - **el sofá**: sofa
 - **sillón reclinable**: a recliner
