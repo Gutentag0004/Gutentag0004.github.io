@@ -22,8 +22,8 @@ category: [language] #One, more categories or no at all.
 - **la nevera**: the refigerator
 - **el congelador**: the freezer
 - **los armarios**: cabinets
-- la mesa
-- el plato
+- **la mesa**
+- **el plato**
 - **el cuenco**: bow
 - **la taza**: cup
 - **el vaso**: the glass

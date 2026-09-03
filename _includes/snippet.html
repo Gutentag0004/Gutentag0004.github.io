@@ -26,7 +26,6 @@
             <p class="snippet__data__metadata__date">{{ post.date | date: '%B %d, %Y' }}</p>
         </section>
         <h2 class="snippet__data__header">{{post.title }}</h2>
-        <p class="snippet__data__text">{{ post.excerpt | strip_html }}</p>
         {% if post.author != nil %}
             <div class="snippet__data__author"> 
                 {% assign author = site.authors | where: "nick", post.author | first %}
